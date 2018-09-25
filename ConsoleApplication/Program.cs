@@ -21,8 +21,8 @@ namespace ConsoleApplication
             location = Console.ReadLine();
 
             //output the processed data using string Interpolation
-            Console.WriteLine("My name is {0}", name);
-            Console.WriteLine("I am from {0}", location);
+            Console.WriteLine("My name is {0}", name); // one way, better for multiple values
+            Console.WriteLine($"I am from { location }");  //another way better for single value
 
             //runs the Christmas Calculator
             ChristmasCounter();
@@ -66,7 +66,7 @@ namespace ConsoleApplication
             DateTime ChristmasDate = new DateTime (2018, 12, 25);
 
             TimeSpan timeToChristmas = ChristmasDate - currentDate;
-            Console.WriteLine("Total Number of till Christmas: " + timeToChristmas.Days);
+            Console.WriteLine($"Total Number of till Christmas: {timeToChristmas.Days}" ); // more string interpolation
            
         }
     }
